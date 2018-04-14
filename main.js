@@ -28,16 +28,14 @@ var changeColor = function() {
     // document.getElementById('quoteAuthor').style.color = newColor;
 };
 
-
 document.onload = getQuote();
 document.getElementById('moreButton').addEventListener("click", getQuote);
 document.getElementById('moreButton').addEventListener("click", changeColor);
 
 
 
-
 function tweetIt () {
-    var phrase = document.getElementById('quoteSpace').innerText + " -"+ document.getElementById('quoteAuthor').innerText;
+    var phrase = "#TatyQuoteGenerator "+document.getElementById('quoteSpace').innerText + " -"+ document.getElementById('quoteAuthor').innerText;
     var tweetUrl = 'https://twitter.com/intent/tweet?text=' +
         encodeURIComponent(phrase)
         + '.';
