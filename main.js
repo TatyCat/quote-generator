@@ -10,7 +10,7 @@ var getQuote = function() {
 
         if(request.status >= 200 && request.status < 400){
             data.forEach(simpQuote=>{
-                document.getElementById('quoteSpace').innerText = simpQuote.quote;
+                document.getElementById('quoteSpace').innerText = '\"'+simpQuote.quote+'\"';
                 document.getElementById('quoteAuthor').innerText = simpQuote.character;
             });
         }else{
@@ -35,7 +35,7 @@ document.getElementById('moreButton').addEventListener("click", changeColor);
 
 
 function tweetIt () {
-    var phrase = "#TatyQuoteGenerator "+ "'" + document.getElementById('quoteSpace').innerText +"'"+ " -"+ document.getElementById('quoteAuthor').innerText;
+    var phrase = "#TatyQuoteGenerator "+ document.getElementById('quoteSpace').innerText + " -"+ document.getElementById('quoteAuthor').innerText;
     var tweetUrl = 'https://twitter.com/intent/tweet?text=' +
         encodeURIComponent(phrase)
         + '.';
