@@ -35,7 +35,7 @@ document.getElementById('moreButton').addEventListener("click", changeColor);
 
 
 function tweetIt () {
-    var phrase = "#TatyQuoteGenerator "+document.getElementById('quoteSpace').innerText + " -"+ document.getElementById('quoteAuthor').innerText;
+    var phrase = "#TatyQuoteGenerator "+ "'" + document.getElementById('quoteSpace').innerText +"'"+ " -"+ document.getElementById('quoteAuthor').innerText;
     var tweetUrl = 'https://twitter.com/intent/tweet?text=' +
         encodeURIComponent(phrase)
         + '.';
